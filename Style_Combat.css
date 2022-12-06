@@ -1,0 +1,98 @@
+body {
+    text-align:center; 
+    background-image: url("https://get.wallhere.com/photo/pixel-art-pixels-digital-art-horizon-1366675.jpg") ;
+    width: 2900px;
+    height: 1100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#p2 {
+    display:flex;
+    justify-content:right;
+    align-items:flex-end;
+    justify-content: space-around;
+}
+
+#p21 {
+    color: chartreuse;
+    font-size: small;
+}
+
+#p22 {
+    color: chartreuse;
+    font-size: small;
+}
+
+#p23 {
+    color: chartreuse;
+    font-size: small;
+}
+
+#p24 {
+    color: chartreuse;
+    font-size: small;
+}
+
+#p3 {
+    display:flex;
+    justify-content: left;
+    align-items:flex-end;
+    justify-content: space-around;
+}
+
+img{
+    height:250px;   
+    width: 250px;
+}
+
+#persosEtMonstres{
+    display:flex;
+    justify-content: space-between;
+}
+
+#boutons {
+
+    background-color: blue;
+    opacity: 65%;
+    display: inline-block;
+    border: 6px double #000000;
+    color: #000000;
+    text-align: center;
+    font-size: 28px;
+    text-decoration: underline;
+    padding: 50px;
+    width: 2900px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 1px;
+    font-style: italic;
+    display: flex;
+    justify-content: space-around;
+    transform: scale(1.45);
+
+}
+
+#b1 {
+    border-radius: 100px;
+}
+
+#b2 {
+    border-radius: 100px;
+}
+
+#b3 {
+    border-radius: 100px;
+}
+
+
+button:hover {
+    background-color: rgba(255, 0, 0, 0.815);
+    border-radius: 100px;
+  }
