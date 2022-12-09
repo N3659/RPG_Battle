@@ -10,34 +10,21 @@ body {
     justify-content: space-between;
 }
 
-#p2 {
+
+#HerosEtPV {
     display:flex;
     justify-content:right;
     align-items:flex-end;
     justify-content: space-around;
 }
 
-#p21 {
-    color: chartreuse;
-    font-size: small;
+#ManaHeros {
+    display: flex;
+    justify-content: space-around;
+    background-color:darkturquoise;
 }
 
-#p22 {
-    color: chartreuse;
-    font-size: small;
-}
-
-#p23 {
-    color: chartreuse;
-    font-size: small;
-}
-
-#p24 {
-    color: chartreuse;
-    font-size: small;
-}
-
-#p3 {
+#Mobs {
     display:flex;
     justify-content: left;
     align-items:flex-end;
@@ -45,8 +32,8 @@ body {
 }
 
 img{
-    height:250px;   
-    width: 250px;
+    height:300px;   
+    width: 300px;
 }
 
 #persosEtMonstres{
@@ -54,41 +41,66 @@ img{
     justify-content: space-between;
 }
 
+#PvBob {
+    background-color: chartreuse;
+    transform: scale(1.5);
+}
+
+#PvBoi {
+    background-color: chartreuse;
+    transform: scale(1.5);
+}
+
+#PvDestructor {
+    background-color: chartreuse;
+    transform: scale(1.5);
+}
+
+#PvRandom_Man {
+    background-color: chartreuse;
+    transform: scale(1.5);
+}
+
+#ManaHeros{
+    transform: scale(1.2);
+}
+
 #boutons {
 
     background-color: blue;
-    opacity: 65%;
+    opacity: 70%;
     display: inline-block;
-    border: 6px double #000000;
+    border: 10px double #000000;
     color: #000000;
     text-align: center;
     font-size: 28px;
     text-decoration: underline;
     padding: 50px;
-    width: 2900px;
+    width: 2700px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 1px;
+    margin: 100px;
     font-style: italic;
     display: flex;
     justify-content: space-around;
-    transform: scale(1.45);
-
 }
 
-#b1 {
+#Attaque {
     border-radius: 100px;
+    transform: scale(3);
 }
 
-#b2 {
+#Attaque_Spe {
     border-radius: 100px;
+    transform: scale(3);
 }
 
-#b3 {
+#Defense {
     border-radius: 100px;
+    transform: scale(3);
 }
 
 
@@ -96,3 +108,14 @@ button:hover {
     background-color: rgba(255, 0, 0, 0.815);
     border-radius: 100px;
   }
+
+#ZoneTexte {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    background-color: blue;
+    border: 10px double #000000;
+    color: #000000;
+    padding: 50px;
+    opacity: 60%;
+}
