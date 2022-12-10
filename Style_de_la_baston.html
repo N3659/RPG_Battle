@@ -14,29 +14,29 @@
     <div id="Mobs">
 
         <div id=" Mr_Tongue">
-            <img src= "Mr_Tongue_attente.png"> 
+            <img id = "Tongue" src= "Mr_Tongue_attente.png"> 
 
-            <div id="PvTongue">
-                25
-            </div>
+        <div id="StatTongue">
+            <div id="PVTongue">25</div>
+        </div>
 
         </div>
 
         <div id="C5">
-            <img src= "C5_attente.png">
+            <img id="C5" src= "C5_attente.png">
 
-            <div id="PvC5">
-                15
-            </div>
+        <div id="StatC5">
+            <div id="PVC5">15</div>
+        </div>
 
         </div>
 
         <div id="Bobby">
-            <img src= "bobby_the_debuff_man_attente.png">
+            <img id="Bobby" src= "bobby_the_debuff_man_attente.png">
 
-            <div id="PvBobby">
-                45
-            </div>
+        <div id="StatBobby">
+            <div id="PVBobby">45</div>
+        </div>
 
         </div>
 
@@ -44,89 +44,98 @@
 
     <div id="Joueurs">
         <div id = HerosEtPV>
-            <div id="Bob">
-                <img src= "Bob_attente.png">
+            <div id="P1Bob">
+                <img id="Bob" src= "Bob_attente.png">
 
-                <div id="PvBob">
-                    50
-                </div>
+                    <div id="menuBob">
+
+                        <button id="boutonAttaqueBob" type="button">Attaque</button>
+                        </br>
+                        <button id="boutonDefenseBob" type="button">Défendre</button>
+                        </br>
+                        <button id="boutonAttSpeBob" type="button">Attaque Spéciale</button>
+
+                    </div>
+
+                    <div id="Statbob">
+                        <progress id="PVBob" class="GreenColor" value="50" min="0" max="50">  </progress>
+                        <progress id="manaBob"  value="30" min="0" max="30">  </progress>
+                    </div>
+
             </div>
 
-            <div id="Boi">
-                <img src= "Da_Boi_attente.png">
+            <div id="P2Boi">
+                <img id="Boi" src= "Da_Boi_attente.png">
 
-                <div id="PvBoi">
-                    40
+                <div id="menuBoi">
+
+                    <button id="boutonAttaqueBoi" type="button">Attaque</button>
+                    </br>
+                    <button id="boutonDefenseBoi" type="button">Défendre</button>
+                    </br>
+                    <button id="boutonAttSpeBoi" type="button">Attaque Spéciale</button>
+
                 </div>
+
+                <div id="StatBoi"></div>
+                    <progress id="PVBoi" class="GreenColor" value="40" min="0" max="40">  </progress>
+                                <progress id="manaBoi"  value="15" min="0" max="15">  </progress>
+                </div>
+
             </div>
 
-            <div id="Destructor">
-                <img src= "destructor_attente.png">
+            <div id="P3Destructor">
+                <img id="Destrutor" src= "destructor_attente.png">
 
-                <div id="PvDestructor">
-                    45
+                <div id="menuDestructor">
+
+                    <button id="boutonAttaqueDestructor" type="button">Attaque</button>
+                    </br>
+                    <button id="boutonDefenseDestructor" type="button">Défendre</button>
+                    </br>
+                    <button id="boutonAttSpeDestructor" type="button">Attaque Spéciale</button>
+
                 </div>
+                    <div id="StatDestructor">
+                     <progress id="PVDestructor" class="GreenColor" value="45" min="0" max="45">  </progress>
+                                <progress id="manaDestructor"  value="25" min="0" max="25">  </progress>
+                    </div>            
             </div>
             
-            <div id="Random_Man">
-                <img src= "random-man_attente.png">
+            <div id="P4Random_Man">
+                <img id="RandomMan" src= "random-man_attente.png">
 
-                <div id="PvRandom_Man">
-                   20
+                <div id="menuRM">
+
+                    <button id="boutonAttaqueRM" type="button">Attaque</button>
+                    </br>
+                    <button id="boutonDefenseRM" type="button">Défendre</button>
+                    </br>
+                    <button id="boutonAttSpeRM" type="button">Attaque Spéciale</button>
+
                 </div>
 
+                <div id="StatRM">
+                    <progress id="PVRM" class="GreenColor" value="20" min="0" max="20">  </progress>
+                    <progress id="manaRM"  value="18" min="0" max="18">  </progress>
+
+                </div>
             </div>
 
         </div>
-
-        <div id= "ManaHeros">
-
-            <p21>
-                MP : 30
-            </p21>
-
-            <p22>
-                MP : 15
-            </p22>
-
-            <p23>
-                MP : 25
-            </p23>
-            
-            <p24>
-                MP : 18
-            </p24>
-
-        </div>
     </div>
 </div>
 
     
 </div>
-<div id="boutons">
 
-    <div id="Attaque">
+<footer>
+    <div id="Affichage" width=160px>
 
-        <button name="button">Attaque</button>
-
-    </div>
-
-    <div id="Attaque_Spe">
-
-        <button name="button">Attaque Spéciale</button>
-
-    </div>
-    
-    <div id="Defense">
-
-        <button name="button">Defense</button>
+        Affichage
 
     </div>
 
-</div>
-
-<div id="Affichage">
-    
-</div>
+</footer>
 
 </html>
