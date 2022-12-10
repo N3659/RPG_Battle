@@ -32,7 +32,7 @@ PvTongue = document.getElementById("PvTongue")
 PvC5 = document.getElementById("PvC5")
 PvBobby = document.getElementById("PvBobby")
 
-//Boutons
+//initialisation des boutons pour chaques perso
 
 AttaqueBob = document.getElementById("boutonAttaqueBob")
 AttaqueSpeBob = document.getElementById("boutonAttSpeBob")
@@ -51,6 +51,7 @@ AttaqueSpeRM = document.getElementById("boutonAttSpeRM")
 DefenseRM = document.getElementById("boutonDenfenseRM")
 
 //detection des appuis boutons
+
 boutonABob.addEventListener('click', boutonAttaqueBob)
 boutonDBob.addEventListener('click', boutonDefendreBob)
 boutonASBob.addEventListener('click', boutonSpeBob)
@@ -62,7 +63,6 @@ boutonASBoi.addEventListener('click', boutonSpeBoi)
 boutonADest.addEventListener('click', boutonAttaqueDestructor)
 boutonDDest.addEventListener('click', boutonDefendreDestructor)
 boutonASDest.addEventListener('click', boutonSpeDestructor)
-
 
 boutonARM.addEventListener('click', boutonAttaqueRM)
 boutonDRM.addEventListener('click', boutonDefendreRM)
@@ -137,12 +137,12 @@ function intro() {
   
   }
 
-//bouton attaque perso 1
+//bouton attaque du perso 1 (bob)
 
 function boutonAttaqueBob() {
     degatsSurMonstres();
     tour ++;
-    //mise en buffer de l'action utilisée pour le tour prochain
+    //On vois pour attaquer et on le retire des options pour le tour suivant
     boutonUtilisePrecedentBob=0;
     console.log("action utilisée : " + boutonUtilisePrecedentBob);
     imgBob.src = "img/Bob_The_Buff_Man.gif"
@@ -162,13 +162,13 @@ function boutonAttaqueBob() {
   
   }
   
-  //bouton attaque perso 2
+  //bouton attaque du perso 2 (boi)
   
   function boutonAttaqueBoi() {
   
     degatsSurMonstres();
     tour ++;
-    //mise en buffer de l'action utilisée pour le tour prochain
+    //On vois pour attaquer et on le retire des options pour le tour suivant
     boutonUtilisePrecedentBoi=0;
     console.log("action utilisée : " + boutonUtilisePrecedentBoi);
     document.getElementById("Boi").src = "The_Boi.gif"
@@ -189,13 +189,13 @@ function boutonAttaqueBob() {
   
   }
   
-  //bouton attaque perso 3
+  //bouton attaque du perso 3 (Destructor)
   
   function boutonAttaqueDestructor() {
   
     degatsSurMonstres();
     tour ++;
-    //mise en buffer de l'action utilisée pour le tour prochain
+    //On vois pour attaquer et on le retire des options pour le tour suivant
     boutonUtilisePrecedentDestructor=0;
     document.getElementById("Destructor").src = "img/Destructor2000.gif"
     //on attends la fin du gif en désactivant tous les boutons, puis on les réactive et on passe au tour suivant
@@ -214,7 +214,7 @@ function boutonAttaqueBob() {
   
   }
   
-  //bouton attaque perso 4
+  //bouton attaque du perso 4 (Random-Man)
   
   function boutonAttaqueRM() {
   
@@ -242,10 +242,10 @@ function boutonAttaqueBob() {
   
   
   
-  //bouton défendre
+  //bouton défendre 
   function boutonDefendreBob() {
     Affichage.innerHTML = "Bob se met devant et contracte pour encaisser les chocs" ;
-    //activation de la défense
+    //activation de la défense de bob
     DefBob=true;
     tour ++;
     boutonUtilisePrecedentBob=1;
@@ -255,6 +255,7 @@ function boutonAttaqueBob() {
   
   function boutonDefendreBoi() {
     Affichage.innerHTML = "Boi se tort dans tous les sens pour eviter les attaques" ;
+    //Activation de la defense de Boi
     DefBoi=true;
     tour ++;
     boutonUtilisePrecedentBoi=1;
@@ -264,6 +265,7 @@ function boutonAttaqueBob() {
   
   function boutonDefendreDestructor() {
     Affichage.innerHTML = "Destructor dévie l'attaque grâce a son katana" ;
+    //Activation de la defense de Destructor
     DefDest=true;
     tour ++;
     boutonUtilisePrecedentDestructor=1;
@@ -273,6 +275,7 @@ function boutonAttaqueBob() {
   
   function boutonDefendreRM() {
     Affichage.innerHTML = "RandomMan se tourne sur le côté pour esquiver, tout simplement" ;
+    //Activation defense Random-Man
     DefRM=true;
     tour ++;
     boutonUtilisePrecedentRM=1;
@@ -282,6 +285,7 @@ function boutonAttaqueBob() {
   
   
   //boutons actions spéciales
+
   function boutonSpeBoi() {
     //test s'il reste du mana
     if (manaBob.value>=5){
@@ -368,6 +372,7 @@ function boutonAttaqueBob() {
   
   
   function boutonSpeDestructor() {
+    //test s'il reste du mana
     if (manaBoi.value>=20){
       Affichage.innerHTML="Vaisseau 3 active son canon à particule, infligeant 15 dégtas à l'ennemi selectionné !"
       manaDestructor.value=manaDestructor.value-20;
@@ -423,8 +428,9 @@ function boutonAttaqueBob() {
   
   
   function boutonSpeRM() {
+    //test s'il reste du mana
     if (manaBob.value>=20){
-      Affichage.innerHTML="Vaisseau 4 projette des coques d'urgence, qui protègent ses alliés de la moitié des dégats jusqu'à leur prochain tour !"
+      Affichage.innerHTML="Random-man sort son Desert-Eagle et tire sur les ennemis"
       manaRM.value=manaRM.value-20;
   
       //activation de toutes les défences, elles seront desactivées à la fin de la prochaine riposte
@@ -446,7 +452,7 @@ function boutonAttaqueBob() {
 
     //calcul des dégats aléatoires
     Degats =Math.floor(Math.random() * 25) + 1;
-    Affichage.innerHTML = "Vous avez infligé " + Degats + " points de dégats au monstre" ;
+    Affichage.innerHTML = "Vous avez infligé " + Degats + " points de dégats aux ennemis" ;
   
     //action des dégats en fonction de l'ennemi visé
     if (MobSelection==1){
@@ -610,10 +616,8 @@ function boutonAttaqueBob() {
       Affichage.innerHTML = "Game over, bobby à pris possession du monde"
     }
   
-  
   }
-  
-  
+
   function finTourPerso2() {
     boutonAttaqueBoi.hidden = true;
     boutonDefendreBoi.hidden = true;
@@ -628,10 +632,7 @@ function boutonAttaqueBob() {
   
       tour=0;
   
-  
-  
     }
-  
   
     if (PVDestructor.innerHTML > 0){
       boutonAttaqueDestructor.hidden = false;
@@ -777,7 +778,7 @@ function boutonAttaqueBob() {
           boutonAttaqueDestructor.hidden = false;
           boutonDefendreDestructor.hidden = false;
           boutonSpeDestructor.hidden = false;
-      document.getElementById("vaisseau3").src = "img/vaisseau3Surbrillance.png"
+      document.getElementById("Destructor").src = "img/Destructor_attente.png"
       if(boutonUtilisePrecedentDestructor==0) {
         boutonAttaqueDestructor.hidden = true;
       }
@@ -799,7 +800,7 @@ function boutonAttaqueBob() {
     boutonAttaqueRM.hidden = true;
     boutonDefendreRM.hidden = true;
     boutonSpeRM.hidden = true;
-    document.getElementById("vaisseau4").src = "img/vaisseau4.png"
+    document.getElementById("RandomMan").src = "img/random-man_attente.png"
   
   
     if(tour==herosVivants) {
@@ -818,7 +819,7 @@ function boutonAttaqueBob() {
       boutonAttaqueBob.hidden = false;
       boutonDefendreBob.hidden = false;
       boutonSpeBob.hidden = false;
-      imgVaisseau1.src = "img/vaisseau1Surbrillance.png"
+      imgBob.src = "img/Bob_attente.png"
       if(boutonUtilisePrecedentBob==0) {
         boutonAttaqueBob.hidden = true;
       }
@@ -834,7 +835,7 @@ function boutonAttaqueBob() {
       boutonAttaqueBoi.hidden = false;
       boutonDefendreBoi.hidden = false;
       boutonSpeBoi.hidden = false;
-      document.getElementById("vaisseau2").src = "img/vaisseau2Surbrillance.png"
+      document.getElementById("Boi").src = "img/Da_boi_attente.png"
       if(boutonUtilisePrecedentBoi==0) {
         boutonAttaqueBoi.hidden = true;
       }
@@ -851,7 +852,7 @@ function boutonAttaqueBob() {
       boutonAttaqueDestructor.hidden = false;
       boutonDefendreDestructor.hidden = false;
       boutonSpeDestructor.hidden = false;
-      document.getElementById("vaisseau3").src = "img/vaisseau3Surbrillance.png"
+      document.getElementById("Destructor").src = "img/Destructor.png"
       if(boutonUtilisePrecedentDestructor==0) {
         boutonAttaqueDestructor.hidden = true;
       }
@@ -868,7 +869,7 @@ function boutonAttaqueBob() {
       boutonAttaqueRM.hidden = false;
       boutonDefendreRM.hidden = false;
       boutonSpeRM.hidden = false;
-      document.getElementById("vaisseau4").src = "img/vaisseau4Surbrillance.png"
+      document.getElementById("RandomMan").src = "img/random-man_attente.png"
       if(boutonUtilisePrecedentRM==0) {
         boutonAttaqueRM.hidden = true;
       }
@@ -886,10 +887,7 @@ function boutonAttaqueBob() {
   
   }
   
-  function appelRiposte(){
-    //on désactive tous les boutons le temps de l'anim de riposte
-    //il y a une méthode qui fait ça en une seule ligne, mais je n'arrive pas à la faire fonctionner
-  
+  function appelRiposte(){ 
     desacBoutons();
     
     //si le monstre 1 est encore vivant, on fait sont anim puis on appelle la fonction de dégats de riposte
@@ -1129,8 +1127,4 @@ function boutonAttaqueBob() {
     manaBoi.hidden = true;
     manaDestructor.hidden = true;
     manaRM.hidden = true;
-  
-  
-    
-  
   }
